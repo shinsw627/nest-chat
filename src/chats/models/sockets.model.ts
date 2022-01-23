@@ -1,9 +1,10 @@
 import { Prop, Schema, SchemaFactory, SchemaOptions } from '@nestjs/mongoose';
 import { IsNotEmpty, IsString } from 'class-validator';
+import { Document } from 'mongoose';
 
 const options: SchemaOptions = {
   id: false,
-  collection: 'chattings',
+  collection: 'sockets',
   timestamps: true,
 };
 

@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
+import { ChatsGateway } from 'src/chats.gateway';
 import { Chatting, ChattingSchema } from './models/chattings.model';
 import { Socket as SocketModel, SocketSchema } from './models/sockets.model';
 
@@ -10,5 +11,6 @@ import { Socket as SocketModel, SocketSchema } from './models/sockets.model';
       { name: SocketModel.name, schema: SocketSchema },
     ]),
   ],
+  providers: [ChatsGateway],
 })
 export class ChatsModule {}
